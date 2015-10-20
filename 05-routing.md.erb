@@ -124,9 +124,9 @@ Router.map(function() {
 Мы хотим, чтобы наша ссылка на главную страницу указывала на список постов. Вместо того чтобы определить статический URL `/`, мы можем использовать метод в Handlebars. Конечный результат будет такой же, но это даст нам больше гибкости, так как этот метод будет всегда выводить правильный URL, даже если мы изменим путь маршрута в маршрутизаторе.
 
 ~~~html
-<header class="navbar">
-  <div class="navbar-inner">
-    <a class="brand" href="{{pathFor 'postsList'}}">Microscope</a>
+<header class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="{{pathFor 'postsList'}}">Microscope</a>
   </div>
 </header>
 
