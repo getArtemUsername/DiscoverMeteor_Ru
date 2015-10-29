@@ -202,8 +202,8 @@ ownsDocument = function(userId, doc) {
 Posts = new Meteor.Collection('posts');
 
 Posts.allow({
-  update: ownsDocument,
-  remove: ownsDocument
+  update: function(userId, post) {return ownsDocument(userId, post);},
+  remove: function(userId, post) {return ownsDocument(userId, post);}
 });
 
 Meteor.methods({
@@ -224,8 +224,8 @@ Meteor.methods({
 Posts = new Meteor.Collection('posts');
 
 Posts.allow({
-  update: ownsDocument,
-  remove: ownsDocument
+  update: function(userId, post) {return ownsDocument(userId, post);},
+  remove: function(userId, post) {return ownsDocument(userId, post);}
 });
 
 Posts.deny({
